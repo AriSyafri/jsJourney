@@ -1,0 +1,47 @@
+operator
+- aritmatika        operator binary --> membutuhkan 2 operand (operand1 operator operand2)
+- penugasan                 =
+- perbandingan              =
+- logika                    =
+- string                    =
+- kondisional       operator ternary --> membutuhkan 3 operand
+- typeof            operator unary   --> membutuhkan 1 operand (operator operand atau operand operator)
+
+
+1) operator aritmatika (+, -, *, /, %(modulo,modulus,(sisa bagi))
+2) operator penugasan assignment (= , +=, -=, *=, /=, %=)
+    operator penugasan     |     sama saja dengan
+    ============================================
+    x += y                 |     x = x + y
+    x -= y                 |     x = x - y
+    x *= y                 |     x = x * y
+    x /= y                 |     x = x % y
+    x %= y                 |     x = x % y
+
+3) operator perbandingan (komparasi)
+    operator perbandingan     |     keterangan
+    ======================================================
+         ==                   | sama dengan
+         !=                   | tidak sama dengan
+         ===                  | strinct sama dengan
+         !==                  | strict tidak sama dengan
+         >                    | lebih besar dari
+         <                    | lebih kecil dari
+         >=                   | lebih besar sama dengan
+         <=                   | lebih kecil sama dengan
+
+4) operator logika/ logical
+    operator logika  |   keterangan
+    ====================================
+    &&               | and
+    ||               | or
+    !                | not
+
+5) operator string
+ ) + ada 2 fungsi di js : jika angka maka dijumlah, sedangkan jika string akan di gabung
+
+6) operator typeof
+ -) typeof(operand)
+
+7) operator kondisional (ternary)
+-) (kondisi) ? benar : salah, contoh (x % 2 == 0) ? "genap" : "ganjil"

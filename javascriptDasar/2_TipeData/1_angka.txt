@@ -1,0 +1,27 @@
+Angka
+-------------------------------------------------
+- angka tanpa desimal
+* 10, 1500, 123456
+* akurat sampai 15 digit
+
+- angka dengan desimal
+* 3.14, 0.5, 100.00 // koma(,) diganti titik(.)
+
+- Eksponen
+* 123e5  // 12300000
+* 123e-5 // 0.00123
+
+- Bilangan negatif
+* -2, -34
+
+- angka spesial
+* infinity      (dikonsol 2/0 //infinity)
+* infinity      (dikonsol -2/0 //infinity)
+* NaN // not a number
+
+
+
+note : 
+- jangan pernah memakai angka 0 di awal pada js (karena dianggap oktal)
+- jangan pernah memakai angka 0x di awal (karena dianggap hexadesimal)
+- 100 / "10" // menjadi angka
