@@ -68,7 +68,7 @@ const produk = {
     terjual: 120 
 }; 
 // Soal 1: tampilkan nama dan harga produk 
-console.timeLog("============");
+console.log("============");
 
 console.log(`nama : ${produk.nama}, harga : ${produk.harga} `);
 
