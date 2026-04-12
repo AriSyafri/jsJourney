@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Latihan DOM Sekul</title>
+        <style>
+            .hadir {color: green; font-weight: bold;}
+            .alpa {color: red; font-style: italic;}
+        </style>
+    </head>
+    <body>
+        <h2>Daftar Absensi Siswa</h2>
+        <input type="text" id="inputNama" placeholder="Masukkan nama :">
+        <button id="btnTambah">Tambah ke daftar</button>
+
+        <ul id="daftarSiswa">
+            <li>Mamat</li>
+        </ul>
+
+        <script>
+            const tombol = document.getElementById('btnTambah');
+            const list = document.getElementById('daftarSiswa');
+            const input = document.getElementById('inputNama'); 
+
+            tombol.addEventListener('click', () => {
+                const namaSiswa = input.value;
+
+                if (namaSiswa.trim() !== "") {
+                    const liBaru = document.createElement('li');
+                    liBaru.innerText = namaSiswa;
+                    liBaru.classList.add('hadir');
+
+                    list.appendChild(liBaru);
+                    input.value = "";
+                } else {
+                    alert("nama tidak boleh kosong");
+                }
+            });
+
+            // function tambahSiswaKeList(nama) {
+            //     const liBaru = document.createElement('li');
+            //     liBaru.innerText = nama;
+            //     liBaru.classList.add('hadir');
+            //     input.value = "";
+            // }
+        </script>
+    </body>
+</html>
