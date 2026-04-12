@@ -17,31 +17,54 @@
         </ul>
 
         <script>
+
+            let dataSiswa = [
+                {
+                    id: 1, 
+                    nama: "Ari"
+                }
+            ];
+
             const tombol = document.getElementById('btnTambah');
             const list = document.getElementById('daftarSiswa');
             const input = document.getElementById('inputNama'); 
 
+            function renderDaftar(){
+                list.innerHTML = "";
+
+                list.innerHTML = dataSiswa.map((siswa) => `
+                    <li class="hadir">
+                        ${siswa.nama}
+                        <button onclick="hapusSiswa(${siswa.id})">Hapus</button>
+                    </li>
+                `).join("");
+            }
+
             tombol.addEventListener('click', () => {
-                const namaSiswa = input.value;
+                const namaBaru = input.value.trim();
 
-                if (namaSiswa.trim() !== "") {
-                    const liBaru = document.createElement('li');
-                    liBaru.innerText = namaSiswa;
-                    liBaru.classList.add('hadir');
+                if(namaBaru !== "") {
+                    const objekSiswa = {
+                        id: Date.now(),
+                        nama: namaBaru
+                    };
+                    dataSiswa = [...dataSiswa, objekSiswa];
 
-                    list.appendChild(liBaru);
+                    renderDaftar();
                     input.value = "";
                 } else {
-                    alert("nama tidak boleh kosong");
+                    alert("nama tidak boleh kosong");   
                 }
             });
 
-            // function tambahSiswaKeList(nama) {
-            //     const liBaru = document.createElement('li');
-            //     liBaru.innerText = nama;
-            //     liBaru.classList.add('hadir');
-            //     input.value = "";
-            // }
+            function hapusSiswa(idHapus) {
+                dataSiswa = dataSiswa.filter(siswa => siswa.id !== idHapus);
+                renderDaftar();
+            }
+
+            renderDaftar();
+
+
         </script>
     </body>
 </html>
